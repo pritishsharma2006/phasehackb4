@@ -12,7 +12,14 @@ function App() {
     <Router>
       <div className="app-shell">
         <header className="topbar">
-          <div className="brand">Career AI Suite</div>
+          <div className="brand">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="brand-logo">
+              <path d="M12 2L4 12L12 22L20 12L12 2Z" stroke="#81A6C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M12 2L12 22" stroke="#81A6C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+              <path d="M4 12L20 12" stroke="#81A6C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+            </svg>
+            <span>Career AI Suite</span>
+          </div>
           <nav>
             <NavLink to="/" end>
               Home
@@ -36,7 +43,7 @@ function App() {
         </main>
 
         <footer className="footer">
-          <span>React + Vite · FastAPI · Gemini LLM</span>
+          <span>Developed by RuntimeCompiletime team</span>
         </footer>
       </div>
     </Router>

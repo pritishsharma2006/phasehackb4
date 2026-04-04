@@ -124,24 +124,24 @@ function ResumeHub() {
           <div className="card-grid">
             {resumes.map((resume) => (
               <div key={resume.username} className="card-preview">
-                <div style={{ display: 'flex', justifyContent: 'space-between', gap: 10 }}>
-                  <div>
+                <div className="preview-top">
+                  <div className="preview-info">
                     <strong>{resume.name || 'Unknown'}</strong>
-                    <div className="small-text">@{resume.username}</div>
+                    <div className="small-text" style={{ textAlign: 'left', margin: '4px 0 0 0' }}>@{resume.username}</div>
                   </div>
                   <div className="badge">
-                    {resume.skills.map((skill, index) => (
+                    {resume.skills.slice(0, 5).map((skill, index) => (
                       <span key={index}>{skill}</span>
                     ))}
+                    {resume.skills.length > 5 && <span style={{ opacity: 0.6 }}>+{resume.skills.length - 5} more</span>}
                   </div>
                 </div>
-                <div style={{ marginTop: 14 }}>
+                <div className="preview-actions">
                   <button className="button" onClick={() => handleSelect(resume.username)}>
                     View Details
                   </button>
                   <button
-                    className="button"
-                    style={{ marginLeft: 12, background: '#dc2626' }}
+                    className="button button-danger"
                     onClick={() => handleDelete(resume.username)}
                   >
                     Delete

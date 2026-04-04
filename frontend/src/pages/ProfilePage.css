@@ -1,19 +1,22 @@
 .profile-container {
   min-height: 100vh;
-  background-color: #e5e7eb;
-  padding: 20px;
-  position: relative;
+  background-color: #f3f4f6; /* Lighter background to make page pop */
+  padding: 40px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
 }
 
 .profile-toolbar {
+  width: 100%;
+  max-width: 850px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 12px;
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   flex-wrap: wrap;
-  position: sticky;
-  top: 20px;
   z-index: 50;
 }
 
@@ -22,53 +25,52 @@
 .btn-print,
 .btn-delete {
   background-color: white;
-  border: 1px solid #e5e7eb;
-  padding: 10px 16px;
-  border-radius: 8px;
+  border: 1px solid #d1d5db;
+  padding: 8px 16px;
+  border-radius: 6px;
   cursor: pointer;
-  font-size: 13px;
-  font-weight: 600;
-  color: #111827;
+  font-size: 14px;
+  font-weight: 500;
+  color: #374151;
   transition: all 0.2s;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-  position: relative;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .back-btn:hover,
 .btn-share:hover,
 .btn-print:hover {
-  background-color: #f3f4f6;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  background-color: #f9fafb;
+  border-color: #9ca3af;
 }
 
 .btn-print {
-  background-color: #4f46e5;
+  background-color: #2563eb;
   color: white;
   border: none;
 }
 
 .btn-print:hover {
-  background-color: #4338ca;
-}
-
-.btn-delete {
-  background-color: #ef4444;
-  color: white;
-  border: none;
-}
-
-.btn-delete:hover {
-  background-color: #dc2626;
+  background-color: #1d4ed8;
 }
 
 .btn-share {
-  background-color: #10b981;
+  background-color: #059669;
   color: white;
   border: none;
 }
 
 .btn-share:hover {
-  background-color: #059669;
+  background-color: #047857;
+}
+
+.btn-delete {
+  background-color: #dc2626;
+  color: white;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #b91c1c;
 }
 
 .share-menu-wrapper {
@@ -81,237 +83,249 @@
   right: 0;
   background: white;
   border: 1px solid #e5e7eb;
-  border-radius: 8px;
+  border-radius: 6px;
   margin-top: 4px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   z-index: 100;
-  min-width: 200px;
+  min-width: 180px;
   overflow: hidden;
 }
 
 .share-option {
   display: block;
   width: 100%;
-  padding: 12px 16px;
+  padding: 10px 16px;
   background: none;
   border: none;
   text-align: left;
   cursor: pointer;
-  font-size: 13px;
-  color: #111827;
-  transition: background-color 0.2s;
+  font-size: 14px;
+  color: #374151;
 }
 
 .share-option:hover {
   background-color: #f3f4f6;
 }
 
+/* Delete Modal Styling */
 .delete-confirm-overlay {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.4);
   display: flex;
   align-items: center;
   justify-content: center;
   z-index: 1000;
+  backdrop-filter: blur(2px);
 }
 
 .delete-confirm-modal {
   background: white;
-  padding: 24px;
-  border-radius: 12px;
-  max-width: 400px;
+  padding: 32px;
+  border-radius: 8px;
+  max-width: 440px;
   width: 90%;
-  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
 .delete-confirm-modal h3 {
   margin-top: 0;
-  color: #ef4444;
+  color: #111827;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
 }
 
 .confirm-actions {
   display: flex;
   gap: 12px;
   justify-content: flex-end;
-  margin-top: 20px;
+  margin-top: 24px;
 }
 
-.btn-cancel,
-.btn-confirm-delete {
-  padding: 10px 20px;
-  border-radius: 6px;
-  border: none;
-  cursor: pointer;
-  font-weight: 600;
-}
-
-.btn-cancel {
-  background-color: #f3f4f6;
-  color: #374151;
-}
-
-.btn-cancel:hover {
-  background-color: #e5e7eb;
-}
-
-.btn-confirm-delete {
-  background-color: #ef4444;
-  color: white;
-}
-
-.btn-confirm-delete:hover {
-  background-color: #dc2626;
-}
-
+/* Resume "White Page" Content */
 .resume-content {
   background: white;
-  border-radius: 12px;
-  padding: 32px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 0 auto;
+  padding: 60px 80px; /* Generous margins for document feel */
+  max-width: 850px;
+  width: 100%;
+  min-height: 1100px; /* A4-ish ratio */
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+  color: #1a1a1a;
+  line-height: 1.6;
 }
 
 .resume-header {
   text-align: center;
-  margin-bottom: 32px;
-  border-bottom: 2px solid #e5e7eb;
+  margin-bottom: 40px;
+  border-bottom: 2px solid #111827;
   padding-bottom: 24px;
 }
 
 .resume-header h1 {
-  margin: 0 0 8px 0;
-  font-size: 2.5rem;
+  margin: 0 0 12px 0;
+  font-size: 2.75rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
   color: #111827;
+  text-transform: uppercase;
 }
 
 .resume-header p {
-  margin: 4px 0;
-  color: #6b7280;
+  margin: 2px 0;
+  font-size: 0.95rem;
+  color: #374151;
+}
+
+.resume-header .contact-row {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 8px;
+  font-size: 0.9rem;
 }
 
 .resume-header a {
-  color: #3b82f6;
-  text-decoration: none;
-}
-
-.resume-header a:hover {
+  color: #111827;
   text-decoration: underline;
 }
 
+/* Section Styling */
 .resume-section {
-  margin-bottom: 32px;
+  margin-bottom: 36px;
 }
 
 .resume-section h2 {
+  font-size: 1.1rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
   color: #111827;
-  font-size: 1.5rem;
-  margin-bottom: 16px;
-  border-bottom: 1px solid #e5e7eb;
-  padding-bottom: 8px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid #111827;
+  padding-bottom: 4px;
+  font-weight: 700;
 }
 
-.skills-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.resume-section p {
+  margin: 0;
+  font-size: 1rem;
 }
 
-.skill-tag {
-  background-color: #e0e7ff;
-  color: #3730a3;
-  padding: 6px 12px;
-  border-radius: 20px;
-  font-size: 0.875rem;
-  font-weight: 500;
-}
-
+/* Experience & Projects */
 .experience-item,
 .project-item,
 .education-item {
   margin-bottom: 24px;
-  padding-bottom: 16px;
-  border-bottom: 1px solid #f3f4f6;
 }
 
-.experience-item:last-child,
-.project-item:last-child,
-.education-item:last-child {
-  border-bottom: none;
+.item-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 4px;
 }
 
 .experience-item h3,
 .project-item h3,
 .education-item h3 {
-  margin: 0 0 4px 0;
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 700;
   color: #111827;
-  font-size: 1.125rem;
 }
 
 .duration,
 .year {
-  color: #6b7280;
-  font-size: 0.875rem;
-  margin-bottom: 8px;
+  font-weight: 600;
+  color: #374151;
+  font-size: 0.9rem;
 }
 
 .experience-item ul {
   margin: 8px 0;
   padding-left: 20px;
+  list-style-type: square;
 }
 
 .experience-item li {
-  margin-bottom: 4px;
+  margin-bottom: 6px;
+  font-size: 0.95rem;
+}
+
+/* Skills Layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.skill-tag {
+  background-color: transparent;
+  color: #111827;
+  padding: 0;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.skill-tag::after {
+  content: "•";
+  margin-left: 12px;
+  color: #9ca3af;
+}
+
+.skill-tag:last-child::after {
+  content: "";
+}
+
+/* Loading/Error states */
+.loading, .error-page {
+  padding: 80px;
+  text-align: center;
   color: #374151;
 }
 
-.loading,
-.error-page {
-  text-align: center;
-  padding: 60px 20px;
-}
-
-.loading {
-  color: #6b7280;
-}
-
-.error-page h2 {
-  color: #ef4444;
-  margin-bottom: 16px;
-}
-
-.btn-home {
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  padding: 12px 24px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: 600;
-  margin-top: 20px;
-}
-
-.btn-home:hover {
-  background-color: #2563eb;
-}
-
+/* Print Specifics */
 @media print {
   .profile-toolbar,
   .delete-confirm-overlay {
     display: none !important;
   }
 
+  body {
+    background-color: white !important;
+  }
+
   .profile-container {
-    background: white;
     padding: 0;
+    background: white;
   }
 
   .resume-content {
     box-shadow: none;
-    padding: 20px;
+    padding: 0;
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  .resume-section {
+    page-break-inside: avoid;
   }
 }
+
+@media (max-width: 768px) {
+  .resume-content {
+    padding: 40px 30px;
+  }
+
+  .resume-header h1 {
+    font-size: 2rem;
+  }
+
+  .item-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

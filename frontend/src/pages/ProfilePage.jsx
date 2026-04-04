@@ -151,9 +151,21 @@ function ProfilePage() {
       <div className="resume-content">
         <div className="resume-header">
           <h1>{resume.name || 'Unknown'}</h1>
-          {resume.email && <p className="email">{resume.email}</p>}
-          {resume.phone && <p className="phone">{resume.phone}</p>}
-          {resume.linkedin && <p className="linkedin"><a href={resume.linkedin} target="_blank" rel="noopener noreferrer">{resume.linkedin}</a></p>}
+          <div className="contact-row">
+            {resume.email && <span>{resume.email}</span>}
+            {resume.phone && <span>{resume.phone}</span>}
+            {resume.linkedin && (
+              <span>
+                <a
+                  href={resume.linkedin.startsWith('http') ? resume.linkedin : `https://${resume.linkedin}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </span>
+            )}
+          </div>
         </div>
 
         {resume.summary && (
@@ -163,24 +175,15 @@ function ProfilePage() {
           </section>
         )}
 
-        {resume.skills && resume.skills.length > 0 && (
-          <section className="resume-section">
-            <h2>Skills</h2>
-            <div className="skills-grid">
-              {resume.skills.map((skill, index) => (
-                <span key={index} className="skill-tag">{skill}</span>
-              ))}
-            </div>
-          </section>
-        )}
-
         {resume.experience && resume.experience.length > 0 && (
           <section className="resume-section">
             <h2>Experience</h2>
             {resume.experience.map((exp, index) => (
               <div key={index} className="experience-item">
-                <h3>{exp.role} at {exp.company}</h3>
-                <p className="duration">{exp.duration}</p>
+                <div className="item-header">
+                  <h3>{exp.role} | {exp.company}</h3>
+                  <span className="duration">{exp.duration}</span>
+                </div>
                 {exp.details && (
                   <ul>
                     {exp.details.map((detail, idx) => (
@@ -198,8 +201,10 @@ function ProfilePage() {
             <h2>Projects</h2>
             {resume.projects.map((proj, index) => (
               <div key={index} className="project-item">
-                <h3>{proj.title}</h3>
-                <p className="duration">{proj.duration}</p>
+                <div className="item-header">
+                  <h3>{proj.title}</h3>
+                  <span className="duration">{proj.duration}</span>
+                </div>
                 <p>{proj.details}</p>
               </div>
             ))}
@@ -211,11 +216,24 @@ function ProfilePage() {
             <h2>Education</h2>
             {resume.education.map((edu, index) => (
               <div key={index} className="education-item">
-                <h3>{edu.degree}</h3>
+                <div className="item-header">
+                  <h3>{edu.degree}</h3>
+                  <span className="year">{edu.year}</span>
+                </div>
                 <p>{edu.institution}</p>
-                <p className="year">{edu.year}</p>
               </div>
             ))}
+          </section>
+        )}
+
+        {resume.skills && resume.skills.length > 0 && (
+          <section className="resume-section">
+            <h2>Skills</h2>
+            <div className="skills-grid">
+              {resume.skills.map((skill, index) => (
+                <span key={index} className="skill-tag">{skill}</span>
+              ))}
+            </div>
           </section>
         )}
       </div>
