@@ -1,0 +1,87 @@
+{
+  "d": {
+    "name": "DHRUV KHANDELWAL",
+    "email": "dhruvkhandelwal005@gmail.com",
+    "phone": "+91-9389884955",
+    "linkedin": "https://linkedin.com/in/dhruvkhandelwal",
+    "summary": null,
+    "skills": [
+      "C",
+      "C++",
+      "Java",
+      "Python",
+      "JavaScript",
+      "HTML",
+      "CSS",
+      "React",
+      "React Native",
+      "Node.js",
+      "Express.js",
+      "Expo",
+      "FastAPI",
+      "LangChain",
+      "LangGraph",
+      "MySQL",
+      "MongoDB",
+      "Firebase",
+      "Supabase",
+      "VS Code",
+      "GitHub",
+      "Postman",
+      "REST APIs",
+      "Data Structures and Algorithms",
+      "Object-Oriented Programming",
+      "Operating Systems"
+    ],
+    "experience": [
+      {
+        "role": "App Development Lead",
+        "company": "Elevate (IIITN Development Club)",
+        "duration": null,
+        "details": []
+      },
+      {
+        "role": "Core developer",
+        "company": "TantraFiesta'25 official website",
+        "duration": null,
+        "details": []
+      },
+      {
+        "role": "Web & App Team Lead (8-member)",
+        "company": "E-Summit 2025, IIITN",
+        "duration": null,
+        "details": []
+      },
+      {
+        "role": "Senior member",
+        "company": "Open-Source - GDSC IIITN",
+        "duration": null,
+        "details": []
+      }
+    ],
+    "projects": [
+      {
+        "title": "MyCampus - Campus Utility App",
+        "duration": null,
+        "details": "React Native, Firebase, Expo\n\u2022 Created a full-stack campus utility mobile application for IIITN students integrating mess menu, academic calendar, discussion forums, timetable management, attendance tracking, and club updates.\n\u2022 Integrated Firebase authentication and real-time database to manage user accounts, attendance records, and dynamic content updates.\n\u2022 Deployed the application within the institute community and onboarded 250+ active users, iterating features based on continuous feedback."
+      },
+      {
+        "title": "AI PPT Generator \u2013 Multi-Agent Presentation Builder",
+        "duration": null,
+        "details": "Python, FastAPI, LangGraph, Next.js\n\u2022 Built an AI-powered presentation generator using a multi-agent architecture that converts natural language prompts into structured PowerPoint slides with automated research, planning, and content generation.\n\u2022 Designed a LangGraph-based workflow with specialized agents (Prompt Parser, Research Agent, Slide Planner, Content Writer, Designer, and Compiler) to orchestrate the end-to-end PPT generation pipeline.\n\u2022 Developed a FastAPI backend to process user prompts, coordinate agent execution, and dynamically generate PowerPoint files using python-pptx.\n\u2022 Implemented a Next.js frontend with authentication and an interactive UI allowing users to generate, preview, and download AI-generated presentations."
+      },
+      {
+        "title": "Travel Mate Matching Platform",
+        "duration": null,
+        "details": "React, FastAPI, MongoDB, LLM-based Extraction\n\u2022 Built a travel companion matching platform that extracts structured travel details from uploaded tickets using an LLM-based extraction pipeline.\n\u2022 Designed backend matching logic in FastAPI to identify compatible travel partners based on source, destination, travel date, and timing similarity.\n\u2022 Integrated MongoDB Atlas for persistent ticket storage, duplicate detection, and efficient search across travel records.\n\u2022 Created a React interface enabling ticket upload, local data persistence, and real-time display of ranked travel matches."
+      }
+    ],
+    "education": [
+      {
+        "degree": "B.Tech - Computer Science and Engineering",
+        "institution": "Indian Institute of Information Technology, Nagpur",
+        "year": "2028"
+      }
+    ]
+  }
+}

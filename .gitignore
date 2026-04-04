@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Environment variables (contains API keys - never commit)
+.env
+
+# IDE
+.vscode/
+.idea/
+
+# Build output
+dist/
+build/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Package lock (optional, can be committed)
+# package-lock.json
+
+# Test files
+backend/test_models.py
+
+# Old cloned repos (already merged)
+HackByte/
+phasehackb4/

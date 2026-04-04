@@ -1,0 +1,317 @@
+.profile-container {
+  min-height: 100vh;
+  background-color: #e5e7eb;
+  padding: 20px;
+  position: relative;
+}
+
+.profile-toolbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+  position: sticky;
+  top: 20px;
+  z-index: 50;
+}
+
+.back-btn,
+.btn-share,
+.btn-print,
+.btn-delete {
+  background-color: white;
+  border: 1px solid #e5e7eb;
+  padding: 10px 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 600;
+  color: #111827;
+  transition: all 0.2s;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+}
+
+.back-btn:hover,
+.btn-share:hover,
+.btn-print:hover {
+  background-color: #f3f4f6;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.btn-print {
+  background-color: #4f46e5;
+  color: white;
+  border: none;
+}
+
+.btn-print:hover {
+  background-color: #4338ca;
+}
+
+.btn-delete {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+}
+
+.btn-delete:hover {
+  background-color: #dc2626;
+}
+
+.btn-share {
+  background-color: #10b981;
+  color: white;
+  border: none;
+}
+
+.btn-share:hover {
+  background-color: #059669;
+}
+
+.share-menu-wrapper {
+  position: relative;
+}
+
+.share-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  margin-top: 4px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  z-index: 100;
+  min-width: 200px;
+  overflow: hidden;
+}
+
+.share-option {
+  display: block;
+  width: 100%;
+  padding: 12px 16px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  font-size: 13px;
+  color: #111827;
+  transition: background-color 0.2s;
+}
+
+.share-option:hover {
+  background-color: #f3f4f6;
+}
+
+.delete-confirm-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.delete-confirm-modal {
+  background: white;
+  padding: 24px;
+  border-radius: 12px;
+  max-width: 400px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+}
+
+.delete-confirm-modal h3 {
+  margin-top: 0;
+  color: #ef4444;
+}
+
+.confirm-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.btn-cancel,
+.btn-confirm-delete {
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.btn-cancel {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.btn-cancel:hover {
+  background-color: #e5e7eb;
+}
+
+.btn-confirm-delete {
+  background-color: #ef4444;
+  color: white;
+}
+
+.btn-confirm-delete:hover {
+  background-color: #dc2626;
+}
+
+.resume-content {
+  background: white;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.resume-header {
+  text-align: center;
+  margin-bottom: 32px;
+  border-bottom: 2px solid #e5e7eb;
+  padding-bottom: 24px;
+}
+
+.resume-header h1 {
+  margin: 0 0 8px 0;
+  font-size: 2.5rem;
+  color: #111827;
+}
+
+.resume-header p {
+  margin: 4px 0;
+  color: #6b7280;
+}
+
+.resume-header a {
+  color: #3b82f6;
+  text-decoration: none;
+}
+
+.resume-header a:hover {
+  text-decoration: underline;
+}
+
+.resume-section {
+  margin-bottom: 32px;
+}
+
+.resume-section h2 {
+  color: #111827;
+  font-size: 1.5rem;
+  margin-bottom: 16px;
+  border-bottom: 1px solid #e5e7eb;
+  padding-bottom: 8px;
+}
+
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.skill-tag {
+  background-color: #e0e7ff;
+  color: #3730a3;
+  padding: 6px 12px;
+  border-radius: 20px;
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+
+.experience-item,
+.project-item,
+.education-item {
+  margin-bottom: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.experience-item:last-child,
+.project-item:last-child,
+.education-item:last-child {
+  border-bottom: none;
+}
+
+.experience-item h3,
+.project-item h3,
+.education-item h3 {
+  margin: 0 0 4px 0;
+  color: #111827;
+  font-size: 1.125rem;
+}
+
+.duration,
+.year {
+  color: #6b7280;
+  font-size: 0.875rem;
+  margin-bottom: 8px;
+}
+
+.experience-item ul {
+  margin: 8px 0;
+  padding-left: 20px;
+}
+
+.experience-item li {
+  margin-bottom: 4px;
+  color: #374151;
+}
+
+.loading,
+.error-page {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.loading {
+  color: #6b7280;
+}
+
+.error-page h2 {
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.btn-home {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 20px;
+}
+
+.btn-home:hover {
+  background-color: #2563eb;
+}
+
+@media print {
+  .profile-toolbar,
+  .delete-confirm-overlay {
+    display: none !important;
+  }
+
+  .profile-container {
+    background: white;
+    padding: 0;
+  }
+
+  .resume-content {
+    box-shadow: none;
+    padding: 20px;
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "meta": {
+    "uploadedAt": "2026-04-03T18:30:00Z",
+    "fileName": "resume.pdf",
+    "fileType": "pdf"
+  },
+  "basics": {
+    "name": "Rahul Sharma",
+    "email": "rahul.sharma.dev@gmail.com",
+    "phone": "+91-9876543210",
+    "location": "Jaipur, India",
+    "links": [
+      "https://github.com/rahulsharma",
+      "https://linkedin.com/in/rahulsharma"
+    ]
+  },
+  "sections": [
+    {
+      "type": "education",
+      "title": "Education",
+      "items": [
+        {
+          "institution": "IIIT Nagpur",
+          "degree": "B.Tech in Computer Science",
+          "startDate": "2022",
+          "endDate": "2026",
+          "score": "8.5 CGPA"
+        }
+      ]
+    },
+    {
+      "type": "experience",
+      "title": "Work Experience",
+      "items": [
+        {
+          "company": "TechNova Solutions",
+          "role": "Frontend Developer Intern",
+          "startDate": "2025-05",
+          "endDate": "2025-08",
+          "description": [
+            "Built responsive UI using React.js",
+            "Improved page load speed by 30%",
+            "Collaborated with backend team for API integration"
+          ]
+        }
+      ]
+    },
+    {
+      "type": "projects",
+      "title": "Projects",
+      "items": [
+        {
+          "name": "AI Resume Parser",
+          "description": "Built a system to parse resumes and extract structured data using Gemini API",
+          "techStack": ["Node.js", "Express", "Gemini API"],
+          "link": "https://github.com/rahulsharma/resume-parser"
+        },
+        {
+          "name": "Startup Idea Validator",
+          "description": "Web app to validate startup ideas using market data",
+          "techStack": ["React", "MongoDB", "Node.js"],
+          "link": "https://github.com/rahulsharma/startup-validator"
+        }
+      ]
+    },
+    {
+      "type": "skills",
+      "title": "Skills",
+      "items": [
+        "JavaScript",
+        "React",
+        "Node.js",
+        "MongoDB",
+        "HTML",
+        "CSS",
+        "Git"
+      ]
+    },
+    {
+      "type": "achievements",
+      "title": "Achievements",
+      "items": [
+        "Winner of college hackathon 2025",
+        "Top 5 in inter-college coding competition",
+        "Solved 300+ DSA problems on LeetCode"
+      ]
+    },
+    {
+      "type": "custom",
+      "title": "Extracurricular Activities",
+      "items": [
+        "Member of coding club",
+        "Organized tech fest events"
+      ]
+    }
+  ],
+  "structured": {
+    "education": [
+      {
+        "institution": "IIIT Nagpur",
+        "degree": "B.Tech in Computer Science",
+        "startDate": "2022",
+        "endDate": "2026",
+        "score": "8.5 CGPA"
+      }
+    ],
+    "experience": [
+      {
+        "company": "TechNova Solutions",
+        "role": "Frontend Developer Intern",
+        "startDate": "2025-05",
+        "endDate": "2025-08",
+        "description": [
+          "Built responsive UI using React.js",
+          "Improved page load speed by 30% through optimization",
+          "Collaborated with backend team for seamless API integration"
+        ]
+      }
+    ],
+    "projects": [
+      {
+        "name": "AI Resume Parser",
+        "description": "Built a system to parse resumes and extract structured data using Gemini API",
+        "techStack": ["Node.js", "Express", "Gemini API"],
+        "link": "https://github.com/rahulsharma/resume-parser"
+      },
+      {
+        "name": "Startup Idea Validator",
+        "description": "Web app to validate startup ideas using market data",
+        "techStack": ["React", "MongoDB", "Node.js"],
+        "link": "https://github.com/rahulsharma/startup-validator"
+      }
+    ],
+    "skills": [
+      "JavaScript",
+      "React",
+      "Node.js",
+      "MongoDB",
+      "HTML",
+      "CSS",
+      "Git"
+    ],
+    "achievements": [
+      "Winner of college hackathon 2025",
+      "Top 5 in inter-college coding competition",
+      "Solved 300+ DSA problems on LeetCode"
+    ]
+  }
+}

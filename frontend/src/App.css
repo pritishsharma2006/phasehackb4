@@ -1,0 +1,181 @@
+.app-shell {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 24px;
+  background: rgba(10, 25, 47, 0.95);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.brand {
+  font-size: 1.2rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+nav {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+nav a {
+  color: #9bbbd4;
+  transition: color 0.2s ease;
+}
+
+nav a.active {
+  color: #fff;
+  font-weight: 600;
+}
+
+.content-area {
+  flex: 1;
+  width: min(1200px, 100%);
+  margin: 0 auto;
+  padding: 32px 24px;
+}
+
+.footer {
+  padding: 16px 24px;
+  background: rgba(10, 25, 47, 0.95);
+  color: #8ba0bf;
+  text-align: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.page-card,
+.section-card {
+  background: rgba(13, 21, 33, 0.95);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  padding: 28px;
+  margin-bottom: 24px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.22);
+}
+
+.page-card h1,
+.section-card h2 {
+  margin-top: 0;
+}
+
+.grid {
+  display: grid;
+  gap: 20px;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 22px;
+  background: #2563eb;
+  color: white;
+  transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-1px);
+  background: #1d4ed8;
+}
+
+.input-row {
+  display: grid;
+  gap: 16px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: rgba(255, 255, 255, 0.04);
+  color: #f8fafc;
+  border-radius: 14px;
+  padding: 14px 16px;
+}
+
+textarea {
+  min-height: 160px;
+  resize: vertical;
+}
+
+label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.small-text {
+  color: #9bbbd4;
+  font-size: 0.95rem;
+}
+
+.status-box {
+  padding: 18px 20px;
+  border-radius: 16px;
+  background: rgba(37, 99, 235, 0.12);
+  border: 1px solid rgba(37, 99, 235, 0.2);
+  color: #e2e8f0;
+}
+
+.card-grid {
+  display: grid;
+  gap: 20px;
+}
+
+.card-preview {
+  padding: 20px;
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(15, 23, 42, 0.92);
+}
+
+.card-preview code {
+  display: block;
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+
+.badge {
+  display: inline-flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.badge span {
+  background: rgba(56, 189, 248, 0.14);
+  color: #bfdbfe;
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 0.88rem;
+}
+
+.message {
+  margin-top: 18px;
+  color: #cbd5e1;
+}
+
+.error {
+  margin-top: 18px;
+  color: #fecaca;
+}
+
+pre {
+  background: rgba(15, 23, 42, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  padding: 18px;
+  overflow-x: auto;
+}
