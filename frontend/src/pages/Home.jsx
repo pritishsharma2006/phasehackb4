@@ -19,7 +19,7 @@ function Home() {
           <div className="featured-card">
             <img 
               src="/assets/hero.png" 
-              alt="Career Suite" 
+              alt="Job Saarthi" 
               style={{ width: '100%', borderRadius: '4px', marginBottom: '24px' }}
             />
             <h3>Ready for your next move?</h3>
@@ -70,7 +70,7 @@ function Home() {
             <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" className="feature-icon" style={{ marginBottom: '16px' }}>
               <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" stroke="#81A6C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <h2>Career AI Assistant</h2>
+            <h2>Job Saarthi AI Assistant</h2>
             <p>Your personal career coach, available 24/7. Ask questions about your resume, market trends, or interview preparation strategies.</p>
           </article>
         </Link>
