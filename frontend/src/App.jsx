@@ -18,7 +18,7 @@ function App() {
               <path d="M12 2L12 22" stroke="#81A6C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
               <path d="M4 12L20 12" stroke="#81A6C6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
             </svg>
-            <span>Career AI Suite</span>
+            <span>Job Saarthi</span>
           </div>
           <nav>
             <NavLink to="/" end>
